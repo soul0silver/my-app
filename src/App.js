@@ -22,9 +22,9 @@ function App() {
           <div className='header'><Navbar />
             </div>
                 <Cart />
-          <Cart />
+          
           <div className='main'>
-            
+          <Home />
             <Routes>
               <Route path='/' element={ <Home />} >
               <Route path="/register" element={<Register />}/>
