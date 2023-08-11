@@ -1,0 +1,43 @@
+.form-login {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.create_account{
+    text-align: center;
+    padding-left: 20px;
+}
+.for_login{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    
+}
+.login{
+    padding-right: 40px;
+    border-right-width: 50%;
+    border-right: 0.5px solid black;
+
+}
+
+@media only screen and (max-width:800px) {
+    .for_login{
+        padding: 0;
+    }
+    .login{
+        padding: 0;
+        border:none;
+    
+    }
+    .create_account{
+  
+        padding-left:0
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+.detail{
+  display: flex;
+  flex-wrap: wrap ; 
+  justify-content: center;
+  justify-content: space-between;
+}
+.detail-item label{
+  font-size: 80%;
+}
+
+.detail-item{
+display: flex; 
+flex-direction: column;
+padding: 20px;
+width: 320px;
+}
+.detail-item input{
+  width: 100%;
+  height: 35px;
+  min-height: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+.detail-item p{
+  color: red;
+}
+.detail-item label{
+  font-weight: 500;
+  opacity: 0.8;
+}
+.detail button{
+  font-size: medium;
+  font-weight: 700;
+
+  color:white;
+  background-color: rgb(149, 149, 149);
+  border: 0px;
+}
+
+.valid{
+  border: 2px solid greenyellow;
+}
+
