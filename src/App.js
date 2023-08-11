@@ -26,13 +26,14 @@ function App() {
           <div className='main'>
             
             <Routes>
-              <Route path='' element={ <Home />} />
-              <Route path="/register" element={<Register />}></Route>
+              <Route path='' element={ <Home />} >
+              <Route path="/register" element={<Register />}/>
               <Route path="/flower" element={<Flowers />} />
               <Route path='/login' element={<Login />} />
               <Route path='/aboutus' element={<AboutUs />} />
               <Route path='/detail' element={<Detail />} />
-              <Route path='/checkout' element={<CheckoutPage />} />
+            <Route path='/checkout' element={<CheckoutPage />} />
+          </Route>
             </Routes>
           </div>
           <Footer />
