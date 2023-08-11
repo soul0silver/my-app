@@ -56,7 +56,7 @@ const Navbar = () => {
 
                                                   </div>
                                                   <div>
-                                                            <a onClick={() => setShowcart(!showcart)}><i class="fas fa-shopping-cart fa-lg"></i></a>{(items.length!==0)?<span className="notice">{items.length}</span>:null} 
+                                                            <a className="cart_ic" onClick={() => setShowcart(!showcart)}><i class="fas fa-shopping-cart fa-lg"></i></a>{(items.length!==0)?<span className="notice">{items.length}</span>:null} 
                                                             
                                                   </div>
                                         </div>
