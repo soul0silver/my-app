@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Router } from 'react-router-dom';
 
 import Navbar from './view/Navbar';
 import Flowers from './view/Flowers';
@@ -18,27 +18,29 @@ function App() {
   return (
     <>
       <AppProvider>
-        
-          <div className='header'><Navbar />
-            </div>
-                <Cart />
-          
-          <div className='main'>
-          <Home />
-            <Routes>
-              <Route path='/' element={ <Home />} >
-              <Route path="/register" element={<Register />}/>
+
+        <div className='header'><Navbar />
+        </div>
+        <Cart />
+
+        <div className='main'>
+
+          <Routes>
+            <Route path='/' element={<Home />} ></Route>
+              <Route path="/register" element={<Register />} />
               <Route path="/flower" element={<Flowers />} />
               <Route path='/login' element={<Login />} />
               <Route path='/aboutus' element={<AboutUs />} />
               <Route path='/detail' element={<Detail />} />
-            <Route path='/checkout' element={<CheckoutPage />} />
-          </Route>
-            </Routes>
-          </div>
-          <Footer />
-        
-    </AppProvider >
+              <Route path='/checkout' element={<CheckoutPage />} />
+              <Route path='/my-app' element={<Home />} />
+            
+          </Routes>
+
+        </div>
+        <Footer />
+
+      </AppProvider >
     </>
   );
 }
