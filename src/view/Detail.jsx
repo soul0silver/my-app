@@ -1,5 +1,6 @@
 import { useContext} from "react";
 import { AppContext } from "../Context/AppContext";
+import { Link } from "react-router-dom";
 import './Detail.css'
 const Detail = () => {
           const { detail, setItems, items } = useContext(AppContext);
@@ -77,7 +78,7 @@ const Detail = () => {
                                                                                 </div>
 
                                                                                 <div className="buybtn">
-                                                                                          <button style={{ width: '140px', marginRight: '10px', height: '60px', backgroundColor: 'black', color: 'white', fontWeight: '600' }}>BUY NOW</button>
+                                                                                          <button style={{ width: '140px', marginRight: '10px', height: '60px', backgroundColor: 'black', color: 'white', fontWeight: '600' }}><Link style={{padding:'10px 3px',color:'white'}} to='/checkout' onClick={addtoCart}> BUY NOW</Link></button>
                                                                                           <button style={{ width: '50px', backgroundColor: 'black', color: 'white' }} onClick={addtoCart}><i class="fas fa-cart-plus fa-lg"></i></button>
                                                                                 </div>
                                                                                 <div className="item_info_container">
