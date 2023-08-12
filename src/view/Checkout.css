@@ -159,13 +159,22 @@
 }
 
 @media only screen and (max-width: 900px) {
-       .check_cus {
+       .check_cus,.payment {
               width: 100%;
               display: flex;
               flex-direction: column;
               padding: 5px;
+              
        }
-
+       .payment{
+              align-items: center;
+       }
+       .payment div{
+              width: 100%;
+       }
+       .payment input{
+              margin-right: 20px;
+       }
        .cus_info div input {
               height: 25px;
               padding-left: 10px;
@@ -232,5 +241,13 @@
        th{
               font-size: 8pt;
               font-weight: 200;
+       }
+       .cus_info{
+              padding: 10px;
+              
+       }
+       .check_cus h1{
+              font-size: 18pt;
+              text-align: center;
        }
 }
