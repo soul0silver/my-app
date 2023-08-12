@@ -8,22 +8,22 @@ import Register from './view/Register';
 import Footer from './view/Footer';
 import AboutUs from './view/AboutUs'
 import Detail from './view/Detail';
-import { AppProvider } from './Context/AppContext';
+import { AppContext, AppProvider } from './Context/AppContext';
 
 import Cart from './view/Cart';
 import CheckoutPage from './view/Checkout';
 import Home from './view/Home';
+import { useContext } from 'react';
 function App() {
-
+  const { showcart,setShowcart } = useContext(AppContext);
   return (
     <>
-      <AppProvider>
-
+        <div>
         <div className='header'><Navbar />
         </div>
         <Cart />
 
-        <div className='main'>
+        <div className='main'  onClick={()=>setShowcart(false)}>
 
           <Routes>
             <Route path='/' element={<Home />} ></Route>
@@ -39,8 +39,8 @@ function App() {
 
         </div>
         <Footer />
-
-      </AppProvider >
+</div>
+    
     </>
   );
 }
