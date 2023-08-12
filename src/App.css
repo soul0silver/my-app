@@ -119,9 +119,13 @@ td img {
 
 @media only screen and (max-width: 1023px) {
   .cart {
-    width: 90%;
+    width: 95%;
   }
-
+ 
+  .td_pic img{
+    width: 100%;
+    height: 100%;
+  }
   .reslist {
     top: 89px;
     left: 10px;
