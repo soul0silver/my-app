@@ -81,13 +81,13 @@
 
 .navbar .search input {
         height: 30px;
-        
+        font-size: 10pt;
         padding-left: 10px;
         padding-right: 10px;
         background-color: #ffffff;
         border: 0.3px solid rgb(230, 230, 230);
         border-bottom: 1px solid black;
-        
+        width: 300px;
 }
 .search input:focus{
         outline: none;
