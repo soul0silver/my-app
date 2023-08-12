@@ -48,7 +48,7 @@ const Flowers = (i) => {
                               <div className="filter_by" >
                                    <h3 style={{textAlign:'center'}}>SORT BY PRICE</h3>
                                    <div className="choice">
-                                        <select style={{ width: '140px', height: '20px',marginTop:'5px' }} onChange={(e) => setSort(e.target.value)}>
+                                        <select style={{ width: '100%', height: '20px',marginTop:'5px' }} onChange={(e) => setSort(e.target.value)}>
                                              <option value=""></option>
                                              <option value="asc">Lowest to Highest</option>
                                              <option value="desc">Highest to Lowest</option>

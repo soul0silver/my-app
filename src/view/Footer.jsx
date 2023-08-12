@@ -13,8 +13,8 @@ const Footer = () => {
 
                 <div className="footer-content">
                     <div className='footer-content-item'>
-                        <p>8A Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi 100000, Vietnam</p>
-                        <p>(123)456-789</p>
+                        <h6>8A Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi 100000, Vietnam</h6>
+                        <a href="tel:(123) 156-789" id="tel0" class="phoneNo">(123) 156-789</a>
                         <p>Contact Us:G5rden@gmail.com</p>
                         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
                             <div style={{ display: 'flex', width: '10%', justifyItems: 'center', paddingTop: '10px' }}>
@@ -39,26 +39,21 @@ const Footer = () => {
 
 
                 <div className='footer-mid'>
-                    <div className='submit'>
-                        <h2 style={{ fontSize: '12pt' }}>SIGN UP FOR SPECIAL OFERS!</h2>
-                        <input placeholder='Enter E-Mail Address' type="email" id="email" />
-                        <input type="submit" value="GO" />
-                    </div>
                     <div className='footer-link' >
-                        <h3>LEARN MORE ABOUT</h3>
+                        <h6>LEARN MORE ABOUT</h6>
                         <Link id='link'>About Us</Link>
                         <Link id='link'>Privacy</Link>
                     </div>
 
                     <div className='footer-link'>
-                        <h3>SHOP</h3>
+                        <h6>SHOP</h6>
                         <Link id='link'>Anniversary</Link>
                         <Link id='link'>Birthday</Link>
                         <Link id='link'>Get Well</Link>
                     </div>
 
                     <div className='footer-link'>
-                        <h3>CUSTOMER SERVICE</h3>
+                        <h6>CUSTOMER SERVICE</h6>
                         <Link id='link'>Help/FAQs</Link>
                     </div>
                 </div>

@@ -119,9 +119,9 @@ const Home = () => {
                       Qui ex dolore at repellat, quia neque doloribus omnis adipisci, ipsum eos odio fugit ut eveniet blanditiis praesentium totam non nostrum dignissimos nihil eius facere et eaque. Qui, animi obcaecati.
                     </p>
                     <div className="btn-box">
-                      <a href="#" className="btn1">
+                    <Link to={'/flower'} className="btn1">
                         Buy Now
-                      </a>
+                      </Link>
                       <a href="#" className="btn2">
                         See More
                       </a>
@@ -405,9 +405,9 @@ const Home = () => {
                       Omnis ex nam laudantium odit illum harum, excepturi accusamus at corrupti, velit blanditiis unde perspiciatis, vitae minus culpa? Beatae at aut consequuntur porro adipisci aliquam eaque iste ducimus expedita accusantium?
                     </p>
                     <div className="btn-box">
-                      <a href="#" className="btn1">
+                      <Link to={'/flower'} className="btn1">
                         Buy Now
-                      </a>
+                      </Link>
                       <a href="#" className="btn2">
                         See More
                       </a>

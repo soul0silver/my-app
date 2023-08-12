@@ -59,6 +59,11 @@ td img{
           height: 90px;
           
 }
+.reslist{
+  position: fixed;
+  top: 80px;
+  left: 20%;
+}
 .result{
   overflow-y: scroll;
   background-color: rgb(238, 238, 238);
@@ -70,6 +75,8 @@ td img{
   display: flex;
   padding: 10px;
   border-bottom: 0.5px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .result::-webkit-scrollbar {
   display: none; /* cho Chrome, Safari, and Opera */
@@ -88,5 +95,9 @@ td img{
 @media only screen and (max-width: 1023px) {
           .cart{
                     width: 90%;
+          }
+          .reslist{
+            top:89px;
+            left: 10px;
           }
 }

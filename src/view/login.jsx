@@ -53,7 +53,7 @@ const Login = () => {
 
                         </div>
                         <div className="detail-item">
-                            <input style={{ height: '33px',width:'104%' }} type='submit' value={'LOGIN'}/>
+                            <input style={{ height: '33px',width:'100%' }} type='submit' value={'LOGIN'}/>
                         </div>
                         <div className="detail-item">
                             <Link to="/forget" style={{ textAlign: 'center' }}>FORGOT PASSWORD</Link>

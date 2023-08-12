@@ -6,13 +6,18 @@ import Search from "./Search";
 
 const Navbar = () => {
           const [show, setShow] = useState(false);
-          const { items, showcart, setShowcart, log, user,item } = useContext(AppContext);
+          const { items, showcart, setShowcart, log, user,item,setUser } = useContext(AppContext);
           // const [user,setUser]=useState()
           // useEffect(() => {
           //           setUser(JSON.parse(window.localStorage.getItem('user')).name)
           // },[])
           const [text, setText] = useState('');
-
+          const logout = () => {
+                    setUser(pre => {
+                              window.localStorage.removeItem('user');
+                              return null;
+                    })
+          }
           return (
 
                     <div className="navbar">
@@ -29,8 +34,9 @@ const Navbar = () => {
                                         <div className={(!show) ? "navbar_mid out" : "navbar_mid in"}>
                                                   <div style={{ with: '100%' }} ><button className="button_close" onClick={() => setShow(!show)}>X</button></div>
 
-                                                  <div className="search">
-                                                            <input type="text" placeholder="find your flowers" onChange={(e)=>setText(e.target.value)} />
+                                                  <div className="search" style={{position:'relative'}}>
+                                                            <input type="text"  placeholder="find your flowers" onChange={(e) => setText(e.target.value)} />
+                                                            <i class="fas fa-search" style={{color:'gray',marginLeft:'-22px'}}></i>
                                                   </div>
                                                   <div className="nav_link">
                                                             <Link to={'/flower'}>Flowers</Link>
@@ -38,21 +44,24 @@ const Navbar = () => {
                                                   <div className="nav_link">
                                                             <Link to={'/aboutus'}>Abouts us</Link>
                                                   </div>
-                                                  <div className="nav_link">
-                                                            <Link>Help</Link>
-                                                  </div>
+                                        
 
 
 
                                         </div>
                                         <div className="navbar_right">
-                                                  <div>
+                                                  <div className="user_ic">
+                                                           
+                                                            <Link><i class="fas fa-user fa-lg"></i></Link>
+                                                            <div className="linksub">
                                                             {(user === null) ?
-                                                                      <Link className="yes" to={'/login'}><i class="fas fa-user fa-lg"></i></Link> :
-                                                                      <span className="yes" style={{ fontWeight: '500' }} >Hi, {user.lastname }</span>
-                                                            }
-                                                            <Link className='no' to={'/login'}><i class="fas fa-user fa-lg"></i> <span className="icon_name">Login</span></Link>
-
+                                                                                <div style={{ borderRadius: '8px', backgroundColor: 'black', padding: '3px', textAlign: 'center', height:'30px',lineHeight:'20px' }}><Link style={{ color: 'white', textAlign:'center'}}  to={'/login'}>Login</Link></div> :
+                                                                                <div>
+                                                                                          <div><span style={{ fontWeight: '500' }} >Hi, {user.lastname}</span></div>
+                                                                                          <div style={{borderRadius:'8px',backgroundColor:'black',padding:'3px', textAlign: 'center', height:'30px',lineHeight:'20px' }}><Link style={{color:'white'}} to={'/'} onClick={logout}>Log out</Link></div>
+                                                                                </div>
+                                                                      }
+                                                            </div>
 
                                                   </div>
                                                   <div>
