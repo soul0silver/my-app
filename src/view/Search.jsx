@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AppContext } from "../Context/AppContext";
 const Search = ({ e }) => {
           const { setDetail } = useContext(AppContext);
+          
           return (
                     <div className="reslist">
                               <div className="result">
