@@ -39,9 +39,9 @@
 
 .navbar .navbar_logo .logo {
         font-weight: 600;
-        font-size: 16pt;
+        font-size: 15pt;
         text-align: center;
-
+        word-spacing: -1.7pt;
 }
 .navbar .navbar_logo .logo a:hover{
         color: #ffffff;
@@ -54,7 +54,7 @@
 .navbar_mid {
         display: flex;
         justify-content: space-between;
-        width: 66%;
+        width: 70%;
         padding-right: 70px;
 }
 

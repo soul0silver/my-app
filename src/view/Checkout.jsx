@@ -6,7 +6,9 @@ import data from "./product";
 function CheckoutPage() {
 
           const { items, setItems, user } = useContext(AppContext);
-
+          const removeItem = (i) => {
+                    setItems(items.filter((p, index) => p !== i))
+          }
           const calculateTotal = () => {
                     return items.reduce((total, item) => total + item.price * item.quantity, 0);
           };
@@ -32,6 +34,10 @@ function CheckoutPage() {
                     window.localStorage.setItem('items', JSON.stringify(items));
                     setItems(JSON.parse(window.localStorage.getItem('items')))
 
+          }
+          const handleSubmit = (e) => {
+                    e.preventDefault();
+                    alert('Payment successful!')                                                                                       
           }
           console.log(user)
           return (
@@ -60,7 +66,7 @@ function CheckoutPage() {
                                                                                                     <td className="td_price">$ {item.price}</td>
                                                                                                     <td className="td_quan"><input type="number" value={item.quantity} min={1} onChange={(e) => setQuan(item, i, e.target.value)} /></td>
                                                                                                     <td className="td_total">$ {calTotal(i)}</td>
-                                                                                                    <td className="td_del"><button>X</button></td>
+                                                                                                    <td className="td_del" onClick={()=>removeItem(item)}><button>X</button></td>
                                                                                           </tr>
                                                                                 ))}
                                                                       </tbody>
@@ -75,7 +81,7 @@ function CheckoutPage() {
                                                   
 
                                         </div>
-                                        <form action="">
+                                        <form action="" onSubmit={handleSubmit}> 
                                                   <div className="check_cus">
 
                                                             <div className="cus_info">
@@ -84,7 +90,7 @@ function CheckoutPage() {
                                                                                 <label>First Name:</label>
                                                                                 <input
                                                                                           type="text"
-                                                                                          value={(user === null) ? '' : user.firstname}
+                                                                                          defaultValue={(user === null) ? '' : user.firstname}
                                                                                           onChange={(e) => setCustomerInfo({ ...customerInfo, firstName: e.target.value })}
                                                                                           required
                                                                                 />
@@ -93,7 +99,7 @@ function CheckoutPage() {
                                                                                 <label>Last Name:</label>
                                                                                 <input
                                                                                           type="text"
-                                                                                          value={(user === null) ? '' : user.lastname}
+                                                                                          defaultValue={(user === null) ? '' : user.lastname}
                                                                                           onChange={(e) => setCustomerInfo({ ...customerInfo, lastName: e.target.value })}
                                                                                           required
                                                                                 />
@@ -102,7 +108,7 @@ function CheckoutPage() {
                                                                                 <label>Email:</label>
                                                                                 <input
                                                                                           type="email"
-                                                                                          value={(user === null) ? '' : user.email}
+                                                                                          defaultValue={(user === null) ? '' : user.email}
                                                                                           onChange={(e) => setCustomerInfo({ ...customerInfo, email: e.target.value })}
                                                                                           required
                                                                                 />
@@ -111,7 +117,7 @@ function CheckoutPage() {
                                                                                 <label>Address:</label>
                                                                                 <input
                                                                                           type="text"
-                                                                                          value={(user === null) ? '' : user.address}
+                                                                                          defaultValue={(user === null) ? '' : user.address}
                                                                                           onChange={(e) => setCustomerInfo({ ...customerInfo, address: e.target.value })}
                                                                                           required
                                                                                 />
