@@ -34,14 +34,14 @@ const Login = () => {
    
     return (
         <>
-            <h1 style={{ textAlign: 'center' }}>LOGIN TO YOUR ACCOUNT</h1>
+            <h1 style={{ textAlign: 'center' }}>LOG IN TO YOUR ACCOUNT</h1>
             <div className="for_login">
                 
                 <div className="login" >
                     <div className="detail-item">
                         <h2 style={{ fontWeight: '400', textAlign: 'center' }}>Already have an Account?</h2>
                     </div>
-                    <form onSubmit={handleSubmit}   action={(log)? '':'/'}>
+                    <form onSubmit={handleSubmit} method='post'  action={(log)? '':'/'}>
 
                         <div className="detail-item">
                             <label htmlFor="email">EMAIL*</label>
