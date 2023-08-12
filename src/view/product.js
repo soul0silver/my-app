@@ -17,7 +17,7 @@ const data = {
                               desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
                               id: 1,
                               img: img1,
-                              name: "BEAUTIFUL LOVE BOUQUET",
+                              name: "flower1",
                               price: 20,
                               size: 10,
                               status: "new",
@@ -26,7 +26,7 @@ const data = {
                     },
                     {
                               id: 2,
-                              name: "BEAUTIFUL LOVE BOUQUET",
+                              name: "flower2",
                               price: 10,
                               size: 18.5,
                               desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
@@ -38,7 +38,7 @@ const data = {
                     },
                     {
                               id: 3,
-                              name: "BEAUTIFUL LOVE BOUQUET",
+                              name: "flower3",
                               price: 40,
                               size: 18,
                               desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
@@ -50,7 +50,7 @@ const data = {
                     },
                     {
                               id: 4,
-                              name: "BEAUTIFUL LOVE BOUQUET",
+                              name: "flower4",
                               price: 55,
                               size: 16,
                               desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
@@ -62,7 +62,7 @@ const data = {
                     },
                     {
                             id: 5,
-                            name: "BEAUTIFUL LOVE BOUQUET",
+                            name: "flower5",
                             price: 11,
                             size: 14.5,
                             desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
@@ -74,7 +74,7 @@ const data = {
                     },
                     {
                             id: 6,
-                            name: "BEAUTIFUL LOVE BOUQUET",
+                            name: "flower6",
                             price: 23,
                             size: 15,
                             desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
@@ -86,7 +86,7 @@ const data = {
                     },
                     {
                             id: 7,
-                            name: "BEAUTIFUL LOVE BOUQUET",
+                            name: "Bflower7",
                             price: 32,
                             size: 11.5,
                             desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
@@ -98,7 +98,7 @@ const data = {
                     },
                     {
                             id: 8,
-                            name: "BEAUTIFUL LOVE BOUQUET",
+                            name: "flower8",
                             price: 26,
                             size: 8.5,
                             desc: "Send comfort and thoughts of hope for a brighter day with this peaceful basket of white sympathy blooms, and a sweet hint of pink. Gently uplifting, it is perfect for the service.White roses, alstroemeria and larkspur along with pink spray roses are beautifully arranged in a natural-tone wicker basket.",
