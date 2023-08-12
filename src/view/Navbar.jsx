@@ -6,12 +6,14 @@ import Search from "./Search";
 
 const Navbar = () => {
           const [show, setShow] = useState(false);
-          const { items, showcart, setShowcart, log, user,item,setUser } = useContext(AppContext);
+          const { items, showcart, setShowcart, user,item,setUser } = useContext(AppContext);
           // const [user,setUser]=useState()
           // useEffect(() => {
           //           setUser(JSON.parse(window.localStorage.getItem('user')).name)
           // },[])
+          
           const [text, setText] = useState('');
+       
           const logout = () => {
                     setUser(pre => {
                               window.localStorage.removeItem('user');
@@ -35,7 +37,7 @@ const Navbar = () => {
                                                   <div style={{ with: '100%' }} ><button className="button_close" onClick={() => setShow(!show)}>X</button></div>
 
                                                   <div className="search" style={{position:'relative'}}>
-                                                            <input type="text"  placeholder="find your flowers" onChange={(e) => setText(e.target.value)} />
+                                                            <input type="text"  placeholder="find your flowers" onChange={(e) => setText(e.target.value)} onBlur={()=>setText('')}/>
                                                             <i class="fas fa-search" style={{color:'gray',marginLeft:'-22px'}}></i>
                                                   </div>
                                                   <div className="nav_link">
