@@ -15,7 +15,7 @@ import CheckoutPage from './view/Checkout';
 import Home from './view/Home';
 import { useContext } from 'react';
 function App() {
-  const { showcart,setShowcart } = useContext(AppContext);
+  const { setText,setShowcart } = useContext(AppContext);
   return (
     <>
         <div>
@@ -23,7 +23,7 @@ function App() {
         </div>
         <Cart />
 
-        <div className='main'  onClick={()=>setShowcart(false)}>
+        <div className='main' onClick={() => { setShowcart(false); setText('') }}>
 
           <Routes>
             <Route path='/' element={<Home />} ></Route>

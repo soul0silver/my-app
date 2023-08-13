@@ -8,6 +8,8 @@ export const AppProvider = ({ children }) => {
           const [detail, setDetail] = useState();
           const [items, setItems] = useState([]);
           const [item, setItem] = useState([]);
+          const [text, setText] = useState('');
+
           useEffect(() => {
                     setItems(() => {
                               const data = JSON.parse(window.localStorage.getItem('items'));
@@ -27,7 +29,7 @@ export const AppProvider = ({ children }) => {
                      setItem(data.product)
           }, []);
          window.localStorage.setItem('item',JSON.stringify(data))
-          return <AppContext.Provider value={{ item, detail, setDetail, setItem, items, setItems, showcart, setShowcart, user, setUser }}>
+          return <AppContext.Provider value={{text, setText, item, detail, setDetail, setItem, items, setItems, showcart, setShowcart, user, setUser }}>
                     {children}
           </AppContext.Provider>
 }

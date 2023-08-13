@@ -6,14 +6,14 @@ import Search from "./Search";
 
 const Navbar = () => {
           const [show, setShow] = useState(false);
-          const { items, showcart, setShowcart, user,item,setUser } = useContext(AppContext);
+          const { items, showcart, setShowcart, user,setUser,text, setText } = useContext(AppContext);
           // const [user,setUser]=useState()
           // useEffect(() => {
           //           setUser(JSON.parse(window.localStorage.getItem('user')).name)
           // },[])
+        
           
-          const [text, setText] = useState('');
-       
+          
           const logout = () => {
                     setUser(pre => {
                               window.localStorage.removeItem('user');
@@ -21,10 +21,10 @@ const Navbar = () => {
                     })
           }
           return (
-
+                    <>
                     <div className="navbar">
                               <div className="navbar_container">
-                                        <div className="navbar_logo">
+                                        <div className="navbar_logo" onClick={()=>setShowcart(false)}>
                                                   <button className={'nav_btn'}onClick={() => setShow(!show)}>
                                                             <i className="fas fa-bars" ></i>
                                                   </button>
@@ -33,11 +33,11 @@ const Navbar = () => {
                                                   </div>
 
                                         </div>
-                                        <div className={(!show) ? "navbar_mid out" : "navbar_mid in"}>
+                                        <div className={(!show) ? "navbar_mid out" : "navbar_mid in"} onClick={()=>setShowcart(false)}>
                                                   <div style={{ with: '100%' }} ><button className="button_close" onClick={() => setShow(!show)}>X</button></div>
 
                                                   <div className="search" style={{position:'relative'}}>
-                                                            <input type="text"  placeholder="find your flowers" onChange={(e) => setText(e.target.value)} onBlur={()=>setText('')}/>
+                                                            <input type="text"  placeholder="find your flowers"  onChange={(e) => setText(e.target.value)} />
                                                             <i class="fas fa-search" style={{color:'gray',marginLeft:'-22px'}}></i>
                                                   </div>
                                                   <div className="nav_link">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
                                         </div>
                                         <div className="navbar_right">
-                                                  <div className="user_ic">
+                                                  <div className="user_ic" onClick={()=>setShowcart(false)}>
                                                            
                                                             <Link><i class="fas fa-user fa-lg"></i></Link>
                                                             <div className="linksub">
@@ -73,9 +73,10 @@ const Navbar = () => {
                                         </div>
 
                               </div>
-                              {(text==='')? null : <Search e={text} />}
-                    </div >
-
+                              
+                              </div >
+                              {(text === '') ? null : <Search />}
+</>
           );
 }
 export default Navbar
